@@ -37,3 +37,37 @@
   font: sans serif;
 
 }
+
+.Suma{
+  background-color: red;
+  border-radius: 6px;
+  color:white;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top:200px;
+
+}
+
+.Resta{
+
+    background-color: red;
+    border-radius: 6px;
+    color:white;
+    margin-left: 55%;
+    transform: translateX(-50%);
+    position: absolute;
+    top:200px;
+  
+  }
+  .numero{
+
+    background-color: red;
+    border-radius: 6px;
+    color:white;
+    margin-left: 52%;
+    transform: translateX(20%);
+    position: absolute;
+    top:185px;
+  
+  }
