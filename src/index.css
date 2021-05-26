@@ -27,9 +27,9 @@
 }
 
 .carrito{
-  width: 3%;
+  width: 13%;
   position: relative;
-  top: -5px;
+  top: 0px;
   
 }
 .Contenedor h1{
@@ -71,3 +71,16 @@
     top:185px;
   
   }
+  .card{
+    width:13.5rem;
+    padding:12px;
+    float:left;
+    margin-left: 20px;
+ 
+  }
+  .card-body{
+    text-align: center;
+
+
+  }
+  
