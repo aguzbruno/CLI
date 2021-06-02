@@ -13,6 +13,8 @@ function App(){
 {/* <ItemListContainer/> */}
 {/* <Contador stock={10} initial={0}/> */}
 <br></br>
+<ItemList/>
+
 <ItemDetailContainer/>
 </div>
 </>

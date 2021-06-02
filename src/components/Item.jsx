@@ -1,20 +1,16 @@
 import { BackupOutlined } from "@material-ui/icons";
-
-function Item(){
-
-  return(
- [ {
-    nombre: "Bacon",
-    id:1,
-    url: "https://ver.rosario.gob.ar/media/cache/97/ca/97ca2fe2afbefb7e8ab4530f0242b0e4.png" ,
-    descripcion: "Hamburguesa doble con panceta",
-  }
-  ,{
-    nombre: "Fried",
-    id:2,
-    url: "https://ver.rosario.gob.ar/media/cache/a1/d6/a1d61c45813f60c97f7fdcfd16f736a7.png" ,
-    descripcion: "Hamburguesa doble con cebolla",
-  }
- ]
-  )}
+import React from "react";
+const Item =({item})=> {
+  
+  return(    
+      
+  <div className="card" key={item.id}>
+    
+            <img src={item.url} className="card-img-top" alt="..."/>
+                <div className="card-body">
+                    <h5 className="card-title">{item.nombre}</h5>
+                    <a href="#" class="btn btn-primary">Anadir al carrito</a>
+                </div>
+        </div>
+         )}       
 export default Item;

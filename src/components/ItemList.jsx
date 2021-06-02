@@ -3,13 +3,31 @@ import {React, useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function ItemList (){
-    
+    const arrProducts = [ {
+        nombre: "Bacon",
+        id:1,
+        url: "https://ver.rosario.gob.ar/media/cache/97/ca/97ca2fe2afbefb7e8ab4530f0242b0e4.png" ,
+        descripcion: "Hamburguesa doble con panceta",
+      }
+      ,{
+        nombre: "Fried",
+        id:2,
+        url: "https://ver.rosario.gob.ar/media/cache/a1/d6/a1d61c45813f60c97f7fdcfd16f736a7.png" ,
+        descripcion: "Hamburguesa doble con cebolla",
+      }
+      ,{
+        nombre: "Fried",
+        id:2,
+        url: "https://ver.rosario.gob.ar/media/cache/a1/d6/a1d61c45813f60c97f7fdcfd16f736a7.png" ,
+        descripcion: "Hamburguesa doble con cebolla",
+      }
+     ]
 
     const [productos, setProductos]= useState([]);
 
     const obtenerProductos = async()=> {
         setTimeout(()=>{
-            const datosProductos = Item;
+            const datosProductos = arrProducts;
             setProductos (datosProductos);
         },2000);
     }
@@ -23,27 +41,14 @@ function ItemList (){
     <>
     <div > 
         
-    {productos.map((item)=>{
-        return (
-            
-         
-        <div className="card" key={item.id}>
-            <img src={item.url} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{item.nombre}</h5>
-                    <a href="#" class="btn btn-primary">Anadir al carrito</a>
-                </div>
-        </div>
-     
-  
-            
-           
-        
-        )
-       
-    })
+    {productos.map( item => <Item item = {item}/>
+    
+   
+    
+    )}
+    
 
-}
+
 </div>
 </>
 );

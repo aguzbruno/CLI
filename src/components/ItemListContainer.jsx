@@ -1,9 +1,9 @@
 import '../index.css'
-
+import ItemList from "./ItemList"
 const ItemListContainer =({})=>{
   return (
   <header className="Contenedor">
-      <h1>Soy el ListContainer</h1>
+      <ItemList></ItemList>
       
   </header>
 
