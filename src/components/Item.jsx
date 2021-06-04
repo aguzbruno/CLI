@@ -1,15 +1,18 @@
 import { BackupOutlined } from "@material-ui/icons";
 import React from "react";
-const Item =({item})=> {
-  
-  return(    
+import ItemDetail from "./ItemDetail"
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+
+const Item =({props})=> {
+
+ return(    
       
-  <div className="card" key={item.id}>
+  <div className="card" key={props.id}>
     
-            <img src={item.url} className="card-img-top" alt="..."/>
+            <img src={props.url} className="card-img-top" alt="..."/>
                 <div className="card-body">
-                    <h5 className="card-title">{item.nombre}</h5>
-                    <a href="#" class="btn btn-primary">Anadir al carrito</a>
+                    <h5 className="card-title">{props.nombre}</h5>
+                    <Link to="/items" type='button' className="btn btn-primary" >Ver Detalles</Link>
                 </div>
         </div>
          )}       

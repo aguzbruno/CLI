@@ -1,25 +1,27 @@
 import Item from "./Item"
+import ItemDetail from "./ItemDetail"
 import {React, useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { LaptopWindowsTwoTone } from "@material-ui/icons";
 
 function ItemList (){
     const arrProducts = [ {
-        nombre: "Bacon",
+        nombre: "Cheese",
         id:1,
-        url: "https://ver.rosario.gob.ar/media/cache/97/ca/97ca2fe2afbefb7e8ab4530f0242b0e4.png" ,
-        descripcion: "Hamburguesa doble con panceta",
+        url: "https://images.rappi.com.ar/products/f38f5c0d-2456-43c3-b141-ddf21c51fad7-1616771261753.jpeg?d=128x90&e=webp" ,
+        descripcion: "Hamburguesa simple con panceta",
       }
       ,{
-        nombre: "Fried",
+        nombre: "Fried Onion",
         id:2,
-        url: "https://ver.rosario.gob.ar/media/cache/a1/d6/a1d61c45813f60c97f7fdcfd16f736a7.png" ,
-        descripcion: "Hamburguesa doble con cebolla",
+        url: "https://images.rappi.com.ar/products/85ccfd0d-c1d2-4509-82fe-6ed6873c7cfd-1616771288128.jpeg?d=128x90&e=webp" ,
+        descripcion: "Hamburguesa simple con cebolla",
       }
       ,{
-        nombre: "Fried",
+        nombre: "Bacon",
         id:2,
-        url: "https://ver.rosario.gob.ar/media/cache/a1/d6/a1d61c45813f60c97f7fdcfd16f736a7.png" ,
-        descripcion: "Hamburguesa doble con cebolla",
+        url: "https://images.rappi.com.ar/products/94476e1d-4765-47f2-8299-b1908ffcef50-1616771358349.jpeg?d=128x90&e=webp" ,
+        descripcion: "Hamburguesa simple con bacon",
       }
      ]
 
@@ -41,12 +43,17 @@ function ItemList (){
     <>
     <div > 
         
-    {productos.map( item => <Item item = {item}/>
-    
-   
+    {productos.map ( props => <Item props = {props}/>   
     
     )}
     
+     
+
+
+  
+    
+    
+     
 
 
 </div>

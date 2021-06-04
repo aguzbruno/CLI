@@ -35,6 +35,7 @@
 .Contenedor h1{
   font-size: 12px;
   font: sans serif;
+ float:right;
 
 }
 
@@ -74,9 +75,17 @@
   .card{
     width:13.5rem;
     padding:12px;
-    float:left;
-    margin-left: 20px;
+    flex-direction: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
  
+  }
+  .titulo{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+
   }
   .card-body{
     text-align: center;

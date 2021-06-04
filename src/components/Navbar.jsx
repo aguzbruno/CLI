@@ -2,6 +2,8 @@ import CartWidget from  './CartWidget';
 import logo from '../Icono/logo.png'
 import '../index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+
 
 const Navbar =({saludo})=>{
   return (
@@ -9,24 +11,24 @@ const Navbar =({saludo})=>{
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
        
-       <a className="navbar-brand" href="#">Inicio</a>
+       <Link className="navbar-brand" to="/">Inicio</Link>
        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"></button>
        </div>
-       <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Productos</a>
+       <div className="collapse navbar-collapse" id="navbarText">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Delivery</a>
+        <li className="nav-item">
+          <Link className="nav-link" to="/Delivery">Delivery</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+        <li className="nav-item">
+          <Link className="nav-link" to="/Contacto">Contacto</Link>
         </li>
       </ul>
         
-        <CartWidget/>
-        
+        <Link to="/Carrito"><CartWidget/>
+        </Link>
         </div>
       </nav>
   </header>
