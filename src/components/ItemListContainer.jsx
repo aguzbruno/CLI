@@ -6,7 +6,7 @@ const ItemListContainer =({})=>{
     <p className="titulo">Bienvenid@!</p>
   <header className="Contenedor">
     
-      <ItemList></ItemList>
+      <ItemList>hola</ItemList>
       
   </header>
   </>

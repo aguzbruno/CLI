@@ -19,7 +19,7 @@ function ItemList (){
       }
       ,{
         nombre: "Bacon",
-        id:2,
+        id:3,
         url: "https://images.rappi.com.ar/products/94476e1d-4765-47f2-8299-b1908ffcef50-1616771358349.jpeg?d=128x90&e=webp" ,
         descripcion: "Hamburguesa simple con bacon",
       }
@@ -31,7 +31,7 @@ function ItemList (){
         setTimeout(()=>{
             const datosProductos = arrProducts;
             setProductos (datosProductos);
-        },2000);
+        },1);
     }
 
     useEffect (function (){

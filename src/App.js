@@ -25,7 +25,7 @@ function App(){
      {/* <Contador stock={10} initial={0}/> */}
       <br></br>
       </Route>
-    <Route exact path="/items">
+    <Route exact path="/items/:id">
     <ItemDetailContainer/>
     </Route>
     <Route exact path="/Delivery">

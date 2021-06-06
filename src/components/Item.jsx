@@ -12,7 +12,7 @@ const Item =({props})=> {
             <img src={props.url} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{props.nombre}</h5>
-                    <Link to="/items" type='button' className="btn btn-primary" >Ver Detalles</Link>
+                    <Link to={`/items/${props.id}`} type='button' className="btn btn-primary" >Ver Detalles</Link>
                 </div>
         </div>
          )}       
