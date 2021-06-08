@@ -35,7 +35,7 @@ function ItemList (){
     }
 
     useEffect (function (){
-        console.log ('me ejecute');
+        console.log ('Acabo de hacer un map');
         obtenerProductos();
     },[]);
 

@@ -95,8 +95,16 @@
   .card1{
     width:40.5rem;
     padding:12px;
-    
-    margin-left: 20px;
+      margin-left: 20px;
  
   }
+  .contador{
+  display: inline-block;
+  width: 20%;
+  }
+  .contador2{
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    }
   
