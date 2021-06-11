@@ -6,16 +6,27 @@ import Contador from "./Contador"
 import Botoncarrito from "./Botoncarrito"
 import BotonFinalizar from "./BotonFinalizar"
 import {useState, useEffect} from "react";
+import { useCart} from "../components/CartContext"
 
 const ItemDetail =({productos})=> {
 const compraok=false;
 const [carrito, setcarrito]= useState(false);
+
+const cart = useCart();
+
+
 function Agregaralcarrito1(){
-  console.log("hola")
   setcarrito(true)
-  
+  cart.addItem(productos.nombre,1);
+  console.log(cart)
 }
-console.log(Agregaralcarrito1)
+
+
+
+
+// const AgregarProducto =()=>{
+// cart.itemsencarrito({name:"bicicleta",cantidad:"2"});
+// }
 
 return(    
 

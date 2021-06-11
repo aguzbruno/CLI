@@ -7,7 +7,7 @@ import Delivery from "./components/Delivery"
 import Carrito from "./components/Carrito"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-
+import {CartProvider} from "./components/CartContext"
 
 
 function App(){
@@ -15,6 +15,7 @@ function App(){
   return(
     <>
 <div>
+  <CartProvider>
 <BrowserRouter> 
   <Navbar/>
   <Switch>
@@ -40,6 +41,7 @@ function App(){
   </Switch>
   
 </BrowserRouter> 
+</CartProvider>
 </div>
 </>
 );
