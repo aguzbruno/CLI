@@ -4,13 +4,18 @@ import ItemList from "./ItemList"
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Contador from "./Contador"
 import { useState, useEffect} from "react";
+import Carrito from "./Carrito"
 
 
-function Botonfinalizar(){
+function Botonfinalizar({Finalizarboton}){
 
     
     return (
-    <Link to={`/Carrito`} type='button' className="btn btn-primary" >Finalizar compra</Link>
+    // <Link to={`/Carrito`} type='button' className="btn btn-primary" >Finalizar compra</Link>
+    <button onClick={Finalizarboton} className="btn btn-primary" >Finalizar compra</button>
+    
     )
 }
 export default Botonfinalizar;
+
+    

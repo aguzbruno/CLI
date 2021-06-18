@@ -7,9 +7,10 @@ import Botoncarrito from "./Botoncarrito"
 import BotonFinalizar from "./BotonFinalizar"
 import {useState, useEffect} from "react";
 import { useCart} from "../components/CartContext"
+import Carrito from "../components/Carrito"
+import {useCount}from "../components/Context2"
 
 const ItemDetail =({productos})=> {
-const compraok=false;
 const [carrito, setcarrito]= useState(false);
 
 const cart = useCart();
@@ -17,15 +18,11 @@ const cart = useCart();
 
 function Agregaralcarrito1(){
   setcarrito(true)
-  cart.addItem(productos.nombre,1);
+  cart.addItem([productos.nombre,productos.id]);
   console.log(cart)
 }
-
-
-
-
-// const AgregarProducto =()=>{
-// cart.itemsencarrito({name:"bicicleta",cantidad:"2"});
+// function Finalizarcompra(){
+//   <Carrito itemsencarrito={itemsencarrito}></Carrito>
 // }
 
 return(    
@@ -38,8 +35,8 @@ return(
                     <h6 className="card-title">{productos.descripcion}</h6>
                     <h6 className="card-title">${productos.precio}</h6>
                     </div>
-                    <Contador stock= {10} initial={1} />
-                    {carrito ?  <BotonFinalizar></BotonFinalizar> : <Botoncarrito Agregaralcarrito={Agregaralcarrito1}></Botoncarrito>}
+                    <Contador/>
+                    {carrito ?  <BotonFinalizar ></BotonFinalizar> : <Botoncarrito Agregaralcarrito={Agregaralcarrito1}></Botoncarrito>}
                     
                     <br />  
                     <Link to={`/`} ><button  className="btn btn-secondary">  Volver</button></Link>

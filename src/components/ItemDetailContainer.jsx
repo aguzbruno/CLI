@@ -3,6 +3,7 @@ import {React, useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useParams} from 'react-router-dom';
 
+
 const arrProductos = [ {
     nombre: "Cheese",
     id:1,
@@ -33,7 +34,8 @@ const arrProductos = [ {
     
     //obtengo el id
     const {id} = useParams()
-        // cada vez que el id cambie va a hacer el find
+
+    // cada vez que el id cambie va a hacer el find
     useEffect(() =>{
         const elItem = arrProductos.find(item => item.id == id)
         setProducto(elItem)

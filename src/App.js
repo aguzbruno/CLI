@@ -8,13 +8,16 @@ import Carrito from "./components/Carrito"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import {CartProvider} from "./components/CartContext"
+import {CountProvider} from "./components/Context2"
 
 
 function App(){
 
   return(
     <>
+    
 <div>
+  <CountProvider/>
   <CartProvider>
 <BrowserRouter> 
   <Navbar/>
