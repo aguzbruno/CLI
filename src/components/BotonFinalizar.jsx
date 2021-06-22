@@ -11,8 +11,8 @@ function Botonfinalizar({Finalizarboton}){
 
     
     return (
-    // <Link to={`/Carrito`} type='button' className="btn btn-primary" >Finalizar compra</Link>
-    <button onClick={Finalizarboton} className="btn btn-primary" >Finalizar compra</button>
+    <Link to={`/Carrito`} type='button' className="btn btn-primary" >Finalizar compra</Link>
+    
     
     )
 }

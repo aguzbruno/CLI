@@ -8,15 +8,14 @@ export let itemsencarrito = [];
 
 
 export const CartProvider =({children})=> {
-    const [cart, setCart] = useState ({itemsencarrito: [], cantidad:0});
+    const [cart, setCart] = useState ([{item:"",cantidad:"",precio:0,id:""}]);
     
-    const addItem=(item)=>{
-        setCart({...cart, itemsencarrito:
-            [...cart.itemsencarrito, item] })
+    const addItem=(item1,cantidad1,precio1,id1)=>{
+        setCart([...cart,{item:item1,cantidad:cantidad1,precio:precio1, id:id1}]);
 
     }
     return(
-        <CartContext.Provider value={{cart,addItem}}>
+        <CartContext.Provider value={{cart,addItem,}}>
             {children}</CartContext.Provider>
     )
 }

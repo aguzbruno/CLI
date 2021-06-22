@@ -8,23 +8,20 @@ import BotonFinalizar from "./BotonFinalizar"
 import {useState, useEffect} from "react";
 import { useCart} from "../components/CartContext"
 import Carrito from "../components/Carrito"
-import {useCount}from "../components/Context2"
+
 
 const ItemDetail =({productos})=> {
-const [carrito, setcarrito]= useState(false);
-
 const cart = useCart();
+const [carrito, setcarrito]= useState(false);
+const [count, setCount]= useState(1);
+
+
 
 
 function Agregaralcarrito1(){
   setcarrito(true)
-  cart.addItem([productos.nombre,productos.id]);
-  console.log(cart)
+  cart.addItem(productos.nombre,count,productos.precio,productos.id);
 }
-// function Finalizarcompra(){
-//   <Carrito itemsencarrito={itemsencarrito}></Carrito>
-// }
-
 return(    
 
   <div className="card" key={productos.id}>
@@ -35,8 +32,9 @@ return(
                     <h6 className="card-title">{productos.descripcion}</h6>
                     <h6 className="card-title">${productos.precio}</h6>
                     </div>
-                    <Contador/>
-                    {carrito ?  <BotonFinalizar ></BotonFinalizar> : <Botoncarrito Agregaralcarrito={Agregaralcarrito1}></Botoncarrito>}
+                    
+                    
+                    {carrito ? (console.log(cart), <BotonFinalizar> </BotonFinalizar>) :( <React.Fragment>  <Contador stock={10} initial={count} count={count} setCount={setCount}> </Contador> <Botoncarrito Agregaralcarrito={Agregaralcarrito1}></Botoncarrito></React.Fragment>)}
                     
                     <br />  
                     <Link to={`/`} ><button  className="btn btn-secondary">  Volver</button></Link>

@@ -1,11 +1,18 @@
 import { Divider } from "@material-ui/core";
 import {React, useState} from "react";
 import '../index.css'
-import {useCount}from "../components/Context2"
+import { useCart} from "../components/CartContext"
 
-const Contador = ({stock, initial}) => {
-const count = useCount();
-console.log(count);
+const Contador = ({stock, initial, count,setCount}) => {
+const cart = useCart();
+function agregacontador(n){
+    (count + n <= stock) && (count + n >= 1) ? ( 
+        
+        setCount(count + n)
+        ) : (
+         alert("Estas seleccionando el 0 o superando el stock")
+         );   
+}
 
 return (
     <>
