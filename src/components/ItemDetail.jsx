@@ -37,7 +37,7 @@ return(
                     {carrito ? (console.log(cart), <BotonFinalizar> </BotonFinalizar>) :( <React.Fragment>  <Contador stock={10} initial={count} count={count} setCount={setCount}> </Contador> <Botoncarrito Agregaralcarrito={Agregaralcarrito1}></Botoncarrito></React.Fragment>)}
                     
                     <br />  
-                    <Link to={`/`} ><button  className="btn btn-secondary">  Volver</button></Link>
+                    <Link to={`/items`} ><button  className="btn btn-secondary">  Volver</button></Link>
                     
         </div>
          )}       

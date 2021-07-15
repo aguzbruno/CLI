@@ -5,6 +5,8 @@ import ItemList from "./components/ItemList"
 import Contacto from "./components/Contacto"
 import Delivery from "./components/Delivery"
 import Carrito from "./components/Carrito"
+import Checkout from "./components/Checkout"
+import Inicio from "./components/Inicio"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import {CartProvider} from "./components/CartContext"
@@ -20,12 +22,11 @@ function App(){
 <BrowserRouter> 
   <Navbar/>
   <Switch>
-    <Route exact path="/"> 
+  <Route exact path="/"> 
+    <Inicio/>
+      </Route>
+    <Route exact path="/items"> 
     <ItemListContainer/>
-
-      {/* <ItemListContainer/> */}
-     {/* <Contador stock={10} initial={0}/> */}
-      <br></br>
       </Route>
     <Route exact path="/items/:id">
     <ItemDetailContainer/>
@@ -38,6 +39,9 @@ function App(){
     </Route>
     <Route exact path="/Carrito">
     <Carrito/>
+    </Route>
+    <Route exact path="/Checkout">
+    <Checkout/>
     </Route>
   </Switch>
   

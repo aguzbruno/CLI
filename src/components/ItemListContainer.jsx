@@ -3,10 +3,10 @@ import ItemList from "./ItemList"
 const ItemListContainer =({})=>{
   return (
     <>
-    <p className="titulo">Bienvenid@!</p>
+    <p className="titulo">Hamburguesas</p>
   <header className="Contenedor">
     
-      <ItemList>hola</ItemList>
+      <ItemList></ItemList>
       
   </header>
   </>

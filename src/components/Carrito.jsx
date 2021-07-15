@@ -6,8 +6,8 @@ import Contador from "./Contador"
 import Botoncarrito from "./Botoncarrito"
 import BotonFinalizar from "./BotonFinalizar"
 import {useState, useEffect} from "react";
-import { useCart} from "../components/CartContext"
-
+import { useCart,ObtenerTotal} from "../components/CartContext"
+import { Redirect,NavLink } from 'react-router-dom';
 
 function Carrito(){
   const cart = useCart();
@@ -17,27 +17,23 @@ function Carrito(){
   // }
   let objetos=[]
   const preciototal=0;
-function VaciarCarrito(){
-// cart.cart=[]
-// alert("Desapareceran todo lo que agregaste")
-cart.cart.splice([],1);
-}
-function removeItem(n){
-  // cart.cart=[]
-  // alert("Desapareceran todo lo que agregaste")
-  cart.cart.splice([n],1);
-  
+  function FinalizarCompra() {
+    
+
   }
+  console.log(cart)
   return(
     
-    <>
-     <h2>Mi carrito</h2>
+    <React.Fragment>
+     
 
-     {
+     <div className="Carrito">
+     <h2 cl>Mi carrito</h2>{
+       
       cart.cart.map(item=>(
         
-      <div>
-        <strong key={item.id}>{item.item}</strong> x {item.cantidad} <strong>${item.precio*item.cantidad} </strong> <button  className="btn btn-primary" onClick={()=>{removeItem(item.id)}}>Eliminar Producto </button> <br />
+      <div >
+        <strong key={item.id}>{item.item}</strong> x {item.cantidad} <strong>${item.precio*item.cantidad} </strong> <button  className="btn btn-primary" onClick={()=>{cart.removeItem(item.id)}}>Eliminar Producto </button> <br />
         <br />
       </div>
       
@@ -45,11 +41,14 @@ function removeItem(n){
       ))
 
       }
-      <h2>Total: {}</h2>
-      <BotonFinalizar ></BotonFinalizar> <br /><br />
-      <button onClick={VaciarCarrito} className="btn btn-secondary">Vaciar Carrito</button>
-      
-  </>
+  
+      <h2>Total: ${ObtenerTotal(cart)}</h2>
+    
+      <NavLink className="btn btn-primary" to="/Checkout"> Finalizar Pedido </NavLink><br />
+      <br />
+      <button onClick={cart.VaciarCarrito} className="btn btn-secondary">Vaciar Carrito</button>
+      </div>
+      </React.Fragment>
   );
   }
   

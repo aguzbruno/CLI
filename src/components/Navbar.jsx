@@ -19,11 +19,12 @@ const Navbar =({saludo})=>{
         <li className="nav-item">
           
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/Delivery">Delivery</Link>
-        </li>
+       
         <li className="nav-item">
           <Link className="nav-link" to="/Contacto">Contacto</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/items">Pedidos</Link>
         </li>
       </ul>
         
